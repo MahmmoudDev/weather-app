@@ -1,38 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 .App {
+  min-height: 100vh;
+  background-color: #0755cc;
+}
+
+.weather-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.weather-card {
+  width: 100%;
+  background: rgb(28 52 91 / 36%);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 11px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+
+.weather-header {
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  gap: 10px;
+}
+
+.city-name {
+  margin-right: 20px !important;
+}
+
+.weather-date {
+  margin-right: 20px !important;
+}
+
+/* Weather Information */
+
+.weather-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.weather-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.temperature {
+  font-size: 90px !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.description {
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.temperature-range {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.temperature-range h5 {
+  margin: 0;
+}
+
+.separator {
+  margin: 0 5px;
+}
+
+/* Weather Icon */
+
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-icon svg {
+  font-size: 180px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Weather Image */
+
+.weather-info img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Language Button */
+
+.language-button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.language-button button {
+  color: white;
+}
+
+/* Tablet */
+
+@media (max-width: 600px) {
+  .weather-card {
+    padding: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-header {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .city-name {
+    font-size: 20px !important;
+    margin-right: 5px !important;
+  }
+
+  .weather-date {
+    font-size: 16px !important;
+    margin-right: 5px !important;
+  }
+
+  .weather-content {
+    gap: 5px;
+  }
+
+  .weather-info {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .temperature {
+    font-size: 65px !important;
+  }
+
+  .description {
+    font-size: 16px !important;
+  }
+
+  .weather-info img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .weather-icon svg {
+    font-size: 110px;
+  }
+
+  .temperature-range {
+    gap: 5px;
+  }
+
+  .temperature-range h5 {
+    font-size: 12px;
   }
 }
+
+/* Small Mobile */
+
+@media (max-width: 380px) {
+  .weather-card {
+    padding: 8px;
+  }
+
+  /* .city-name {
+    font-size: 20px !important;
+  } */
+
+  .weather-date {
+    font-size: 13px !important;
+  }
+
+  .temperature {
+    font-size: 50px !important;
+  }
+
+  .weather-info img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .weather-icon svg {
+    font-size: 85px;
+  }
+
+  .temperature-range {
+    gap: 3px;
+  }
+
+  .temperature-range h5 {
+    font-size: 10px;
+  }
+}
+
+/* Font */
+
+@font-face {
+  font-family: "IBM";
+  src: url("/public/fonts/IBM/IBMPlexSansArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.weather-info {
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+  column-gap: 12px !important;
+  row-gap: 8px;
+}
+
+.description {
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.temperature-range {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.temperature-range h5 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .temperature-range {
+    gap: 8px;
+  }
+
+  .temperature-range h5 {
+    font-size: 12px;
+  }
+}
+
