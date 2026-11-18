@@ -30,7 +30,7 @@ A responsive weather application built with **React** and **Material UI**, provi
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/weather-app.git
+git clone https://github.com/MahmmoudDev/weather-app.git
 ```
 
 ### 2. Navigate to the project directory
@@ -76,7 +76,7 @@ The application will run at:
 
 **Mahmmoud Akram**
 
-- GitHub: https://github.com/YOUR_USERNAME
+- GitHub: https://github.com/MahmmoudDev
 
 ---
 
